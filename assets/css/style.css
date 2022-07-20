@@ -114,7 +114,7 @@ body {
 }
 
 .sidebar-section button {
-    height: 45px;
+    height: 48px;
     width: 90%;
     background-color: white;
     color: black;
@@ -122,7 +122,16 @@ body {
     border: none;
     padding: 0 10px;
     font-weight: 600;
+    transition: 500ms;
 
+}
+
+.sidebar-section button:hover {
+    background-color: var(--main-color);
+}
+
+.sidebar-section button:hover a {
+    color: white;
 }
 
 .sidebar-section button a {
@@ -142,7 +151,7 @@ body {
 
 .blog {
     border: 1px solid #E8E8E8;
-    border-radius: 10px;
+    border-radius: 12px;
 } 
 
 .blog-img img {
@@ -161,12 +170,18 @@ body {
     color: #161616;
     border-radius: 5px;
     font-weight: 600;
+    transition: 500ms;
+}
+
+.blog-content button:hover {
+    background-color: var(--main-color);
+    color: white;
 }
 
 .blog-content h3 {
     color: #161616;
     font-size: 15px;
-    line-height: 20px;
+    line-height: 1.4;
 }
 
 .info-icons {
@@ -182,6 +197,39 @@ body {
 
 .info-icons span i {
     padding-right: 5px;
+}
+
+.view-all-btn {
+    display: none;
+    height: 50px;
+    width: 25%;
+    background-color: var(--second-color);
+    color: white;
+    border: none;
+    margin-top: 40px;
+    border-radius: 5px;
+    font-size: 17px;
+    transition: background-color 400ms ease-in;
+}
+
+.view-all-btn a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 13px;
+    font-weight: 600;
+}
+
+.view-all-btn:hover {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.view-all-btn:hover a {
+    color: white;
 }
 
 
@@ -234,7 +282,7 @@ body {
 
 /* Responsive Media Query Code... */
 
-@media screen and (max-width: 557px) {
+@media screen and (max-width: 576px) {
 
     /* Hero Section Media Query Style... */
 
@@ -304,6 +352,10 @@ body {
         gap: 25px;
     }
 
+    .blog {
+        border-radius: 20px;
+    }
+
     .blog-content button {
         height: 35px;
         width: 35%;
@@ -335,4 +387,107 @@ body {
         padding-right: 0;
         text-align: center;
     }
+}
+
+
+/* Tablet Devices Responsive Media Query Style */
+
+@media screen and (min-width: 576px) and (max-width:  991px) {
+
+    .section {
+        padding: 25px;
+    }
+
+    .hero-container {
+        height: 440px;
+    }
+
+    .content {
+        width: 70%;
+    }
+
+    .content h1 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .content button {
+        width: 50%;
+    }
+
+    .content button:hover {
+        width: 50%;
+    }
+
+    .hero-img img {
+        width: 130%;
+        margin: 89px 0 0px 0px;
+    }
+
+    /* Blog Section Media Query Style */
+
+    .section {
+        padding-bottom: 0;
+    }
+
+    .blog-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar-section {
+        width: 100%;
+        height: 140px;
+        background-color: rgba(232, 232, 232, 0);
+        margin-right: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    .sidebar-section button {
+        width: 30%;
+        border: 1px solid rgba(232, 232, 232, 1);
+    }
+
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .last-blog {
+        display: none;
+    }
+
+    /* Show "View All" Button Only for Tablet Devices */
+    .view-all-btn {
+        display: block;
+    }
+
+    .blog-content h3 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+
+    /* Footer Section Media Query Style */
+
+    .footer-menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-menu ul {
+        list-style: none;
+        display: flex;
+        padding: 25px 30px;
+    }
+    
+    .footer-menu ul li {
+        padding-right: 25px;
+        padding-bottom: 25px;
+        text-align: center;
+    }
+    
 }
