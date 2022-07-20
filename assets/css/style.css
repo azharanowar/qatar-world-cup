@@ -89,8 +89,19 @@ body {
 .hero-img img {
     width: 140%;
     margin: 57px 0 -15px -30px;
+    transition: 3s;
 }
 
+
+/* Hero Section Animation */
+
+.hero-container, .hero-img {
+    transition: 800ms;
+}
+.hero-container:hover .hero-img {
+    margin-left: 20px;
+    transform: translateX(50px);
+}
 
 
 /* Blog Section... */
@@ -277,6 +288,30 @@ body {
     color: white;
 }
 
+.footer-social-icons ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-social-icons ul li {
+    padding: 0 8px;
+    transition: 400ms;
+}
+
+.footer-social-icons ul li:hover {
+    color: var(--main-color);
+    margin-top: -12px;
+}
+
+.footer-social-icons ul li a {
+    color: #B9B9B9;
+    font-size: 35px;
+}
+
+.footer-social-icons ul li:hover {
+    color: white;
+}
+
 
 
 
@@ -374,7 +409,7 @@ body {
 
 
     .footer-section {
-        height: 500px;
+        height: 600px;
     }
 
     .footer-menu ul {
@@ -420,9 +455,12 @@ body {
     }
 
     .hero-img img {
-        width: 130%;
-        margin: 89px 0 0px 0px;
+        width: 140%;
+        margin: 64px 0 0 0px;
     }
+
+
+
 
     /* Blog Section Media Query Style */
 
@@ -485,7 +523,7 @@ body {
     }
     
     .footer-menu ul li {
-        padding-right: 25px;
+        padding: 0 15px;
         padding-bottom: 25px;
         text-align: center;
     }
