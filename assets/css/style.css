@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Style For All Pages and Sections */
+
+:root {
+    --main-color: #7F1431;
+    --second-color: #8D1B3D;
+}
+
+body { 
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+}
+
+
+/* Home Page Styles */
+
+
+/* Hero Section... */
+
+.section {
+    padding: 50px 140px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #161616;
+    color: white;
+    border-radius: 30px;
+    padding: 0 100px;
+
+}
+
+.content {
+    width: 60%;
+}
+
+.content h1 {
+    font-size: 40px;
+}
+
+.content p {
+    color: #E8E8E8;
+    line-height: 1.5;
+}
+
+.content button {
+    height: 50px;
+    width: 35%;
+    background-color: var(--second-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    transition: background-color 400ms ease-in;
+}
+
+.content button a {
+    color: white;
+    text-decoration: none;
+}
+
+.content button:hover {
+    height: 50px;
+    width: 35%;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.content button:hover a {
+    color: black;
+}
+
+.content button span {
+    padding-left: 10px;
+}
+
+.hero-img img {
+    width: 140%;
+    margin: 57px 0 -15px -30px;
+}
+
+
+
+/* Blog Section... */
+
+.blog-container {
+    display: flex;
+}
+
+.sidebar-section {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-right: 20px;
+    background-color: #161616;
+    border-radius: 10px;
+}
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.blog {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+} 
+
+.blog img {
+    width: 100%;
+}
