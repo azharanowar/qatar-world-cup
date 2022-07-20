@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 /* Style For All Pages and Sections */
 
@@ -10,6 +10,8 @@
 body { 
     font-family: 'Montserrat', sans-serif;
     background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -40,6 +42,7 @@ body {
 
 .content h1 {
     font-size: 40px;
+    line-height: 1.3;
 }
 
 .content p {
@@ -61,6 +64,8 @@ body {
 .content button a {
     color: white;
     text-decoration: none;
+    display: block;
+    padding: 13px;
 }
 
 .content button:hover {
@@ -92,30 +97,242 @@ body {
 
 .blog-container {
     display: flex;
+    margin-bottom: 50px;
 }
 
 .sidebar-section {
-    width: 400px;
-    height: 300px;
+    width: 450px;
+    height: 250px;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 20px;
     margin-right: 20px;
     background-color: #161616;
     border-radius: 10px;
 }
 
+.sidebar-section button {
+    height: 45px;
+    width: 90%;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    border: none;
+    padding: 0 10px;
+    font-weight: 600;
+
+}
+
+.sidebar-section button a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+
+}
+
 .blogs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 15px;
 }
 
 .blog {
-    border: 1px solid lightgrey;
+    border: 1px solid #E8E8E8;
     border-radius: 10px;
 } 
 
-.blog img {
+.blog-img img {
     width: 100%;
+}
+
+.blog-content {
+    padding: 20px 15px;
+}
+
+.blog-content button {
+    height: 32px;
+    width: 45%;
+    border: 1.5px solid #5B5B5B;
+    background-color: #ffffff;
+    color: #161616;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.blog-content h3 {
+    color: #161616;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.info-icons {
+    display: flex;
+    align-items: center;
+    color: #5B5B5B;
+    font-size: 17px;
+}
+
+.info-icons span {
+    padding-right: 25px;
+}
+
+.info-icons span i {
+    padding-right: 5px;
+}
+
+
+/* Footer Section... */
+
+.footer-section {
+    width: 100%;
+    height: 350px;
+    background-color: #161616;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section h2 {
+    color: white;
+    font-size: 35px;
+}
+
+.footer-section .hr-line {
+    width: 85%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.footer-menu ul {
+    list-style: none;
+    display: flex;
+    padding: 25px 0;
+}
+
+.footer-menu ul li {
+    padding-right: 60px;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: #B9B9B9;
+    transition: 400ms;
+}
+
+.footer-menu ul li a:hover {
+    color: white;
+}
+
+
+
+
+/* Responsive Media Query Code... */
+
+@media screen and (max-width: 557px) {
+
+    /* Hero Section Media Query Style... */
+
+    .section {
+        padding: 15px;
+    }
+
+    .hero-container {
+        padding: 0;
+        flex-direction: column;
+        text-align: center;
+        height: 706px;
+        padding-top: 20px;
+    }
+
+
+    .hero-img img {
+        width: 100%;
+        margin: 0;
+        margin-bottom: -33px;
+        margin-left: 20px;
+        margin-right: -20px
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content button {
+        text-align: center;
+        width: 55%;
+    }
+
+    .content button:hover {
+        text-align: center;
+        width: 55%;
+    }
+
+    .content {
+        width: 80%;
+        padding-bottom: 20px;
+    }
+
+
+    /* Blog Section Media Query Style */
+
+    .blog-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar-section {
+        width: 310px;
+        background-color: rgba(232, 232, 232, 0);
+        margin-right: 0;
+    }
+
+    .sidebar-section button {
+        height: 50px;
+        width: 80%;
+        border: 1px solid rgba(232, 232, 232, 1);
+    }
+
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+    }
+
+    .blog-content button {
+        height: 35px;
+        width: 35%;
+    }
+
+    .blog-content h3 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .info-icons {
+        font-size: 18px;
+    }
+
+    /* Footer Section... */
+
+
+    .footer-section {
+        height: 500px;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .footer-menu ul li {
+        padding-top: 30px;
+        padding-right: 0;
+        text-align: center;
+    }
 }
